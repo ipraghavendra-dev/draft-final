@@ -1,0 +1,13 @@
+{
+  "name": "meridian-verify",
+  "version": "1.0.0",
+  "description": "Two-page email + age verification gate with a password-protected admin dashboard.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2"
+  }
+}
