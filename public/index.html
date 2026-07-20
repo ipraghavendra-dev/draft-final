@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meridian — Verify Access</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<svg class="threshold-arch" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 60 400 L 60 160 A 240 240 0 0 1 540 160 L 540 400" />
+  <path class="glow" d="M 60 400 L 60 160 A 240 240 0 0 1 540 160 L 540 400" />
+</svg>
+
+<!-- STEP 1: verification form -->
+<div class="card" id="form-view">
+  <p class="eyebrow">Meridian · Access Gate</p>
+  <h1>Verify to continue</h1>
+  <p class="subtitle">We just need your email and age to unlock the rest of the site. Takes about ten seconds.</p>
+
+  <form id="verify-form" novalidate>
+    <div class="field">
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+    </div>
+    <div class="field">
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" placeholder="18" min="1" max="120" required />
+    </div>
+    <button type="submit" id="submit-btn">Verify and continue</button>
+    <div class="message" id="form-message"></div>
+  </form>
+
+  <p class="fine-print">Your details are only used to confirm eligibility.</p>
+</div>
+
+<!-- STEP 2: post-verification view -->
+<div class="card hidden" id="success-view">
+  <div class="success-icon">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M4 10.5L8 14.5L16 5.5" stroke="#6f9c8d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <p class="eyebrow">Verified</p>
+  <h1>You're through the gate</h1>
+  <p class="subtitle" id="welcome-text">Welcome. Your access has been confirmed.</p>
+  <p class="fine-print">You can close this tab, or refresh to verify a different account.</p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
