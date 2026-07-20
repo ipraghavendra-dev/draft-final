@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meridian — Admin</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- LOGIN VIEW -->
+<div class="card" id="login-view">
+  <p class="eyebrow">Meridian · Admin</p>
+  <h1>Enter password</h1>
+  <p class="subtitle">This dashboard shows everyone who has verified. Admin access only.</p>
+
+  <form id="login-form" novalidate>
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="••••••••" required />
+    </div>
+    <button type="submit" id="login-btn">Unlock dashboard</button>
+    <div class="message" id="login-message"></div>
+  </form>
+</div>
+
+<!-- DASHBOARD VIEW -->
+<div class="admin-shell hidden" id="dashboard-view">
+  <div class="admin-header">
+    <div>
+      <p class="eyebrow">Meridian · Admin</p>
+      <h1>Verified submissions</h1>
+    </div>
+    <div class="top-bar-actions">
+      <span class="count-pill" id="count-pill">0 total</span>
+      <button class="secondary" id="logout-btn">Log out</button>
+    </div>
+  </div>
+
+  <div id="table-wrap"></div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
